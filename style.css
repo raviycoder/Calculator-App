@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Poppins&display=swap");
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position:relative;
+  background: #86e7e7;
+}
+
+body.active {
+  background: #283f93;
+}
+
+h1.dark {
+  color: gold;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  width: 330px;
+  height: 595px;
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    #59f4f4 0%,
+    rgba(9.92, 114.93, 238.2, 0.68) 100%
+  );
+  box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 23px;
+  border: 5px black solid;
+}
+
+.calculator.dark {
+  background: linear-gradient(180deg, #322178 0%, rgba(4, 30, 60, 0.94) 100%);
+  filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+}
+
+.toggle {
+  background-color: aliceblue;
+  position: relative;
+  left: 98px;
+  top: 5px;
+  border-radius: 20px;
+  width: 65px;
+  height: 25px;
+}
+
+.toggle .dot {
+  cursor: pointer;
+  font-size: 90px;
+  position: relative;
+  bottom: 55.5px;
+  right: 5px;
+  color: #59f4f4;
+  transition: all 0.5s;
+}
+
+.icon.active {
+  content: url("moon_icon.png");
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 90px;
+  top: 8px;
+}
+
+.dot::selection {
+  background: transparent; /* Set the background to transparent */
+  color: inherit; /* Inherit the text color */
+}
+
+.dot.active {
+  transform: translateX(37px);
+  color: #59f4f4;
+}
+
+.toggle.active {
+  background: #0c2889;
+  box-shadow: 0px 3.2558140754699707px 3.2558140754699707px
+    rgba(195, 193, 193, 0.25);
+}
+
+.output {
+  position: absolute;
+  width: 290px;
+  height: 158px;
+  margin-top: 35px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.output.dark {
+  background-color: #1D1347;
+  box-shadow: 0px 2px 2px #ffffff83;
+}
+.answer.dark {
+  color: white;
+}
+.entering.dark {
+  color: white;
+}
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  display: flex;
+  position: relative;
+  top: 45px;
+  height: 50%;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.answer {
+  position: relative;
+  text-align: right;
+  right: -10px;
+  width: 270px;
+  direction: ltr; /* Set the text direction to right-to-left */
+  padding-left: 0px;
+  height: 49px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.entering {
+  position: relative;
+  text-align: right;
+  top: 50px;
+  right: 10px;
+  width: 100%;
+  direction: ltr; /* Set the text direction to right-to-left */
+  padding-left: 0px;
+  height: 49px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Poppins;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.key1 {
+  position: relative;
+  /* top: 210px; */
+  right: 47px;
+  width: 60px;
+  cursor: pointer;
+  height: 60px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 15px;
+  background: #b2f5f5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #3d3737;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.key1:hover {
+  background-color: #b4e2e2;
+}
+
+.key1.dark {
+  background: #1d1344;
+  box-shadow: 0px 2px 2px #b1a0f8;
+  border-radius: 20px;
+  color: white;
+}
+
+.delete {
+  background-image: url("https://img.icons8.com/external-anggara-flat-anggara-putra/32/000000/external-delete-user-interface-basic-anggara-flat-anggara-putra.png");
+  /* margin-top: 10px; */
+  background-position: center;
+  width: 32;
+  height: 32;
+  background-repeat: no-repeat;
+}
+
+.delete.dark {
+  background-image: url("icons8-backspace-48.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+}
+
+.numberx {
+  font-size: 40px;
+  text-align: center;
+}
+
+.firstrow {
+  position: absolute;
+  top: 35%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16.8px; /* Adjust the gap as needed */
+  margin-left: -145px;
+  display: flex;
+  justify-content: space-between;
+}
+.firstrow2 {
+  position: absolute;
+  top: 48%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16.8px; /* Adjust the gap as needed */
+  margin-left: -145px;
+  display: flex;
+  justify-content: space-between;
+}
+.firstrow3 {
+  position: absolute;
+  top: 61%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16.8px; /* Adjust the gap as needed */
+  margin-left: -145px;
+  display: flex;
+  justify-content: space-between;
+}
+.firstrow4 {
+  position: absolute;
+  top: 74%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16.8px; /* Adjust the gap as needed */
+  margin-left: -145px;
+  display: flex;
+  justify-content: space-between;
+}
+.firstrow5 {
+  position: absolute;
+  top: 87%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16.8px; /* Adjust the gap as needed */
+  margin-left: -145px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.patanahi {
+  font-size: 20px;
+}
